@@ -8,7 +8,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'; // Import hamburger and close 
 
 // Fetch assessment detail
 const fetchAssessmentDetail = async (id, token) => {
-  const { data } = await axios.get(`http://localhost:5000/api/assessments/${id}`, {
+  const { data } = await axios.get(`https://assessment-backend-myde.onrender.com/api/assessments/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

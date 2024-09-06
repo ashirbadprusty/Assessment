@@ -8,7 +8,7 @@ import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger and close 
 const createAssessment = async (assessmentData) => {
   const { token } = assessmentData;
   const response = await axios.post(
-    "http://localhost:5000/api/assessments",
+    "https://assessment-backend-myde.onrender.com/api/assessments",
     {
       title: assessmentData.title,
       description: assessmentData.description,

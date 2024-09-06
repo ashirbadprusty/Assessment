@@ -8,7 +8,7 @@ import Sidebar from '../Dashboard/Sidebar';
 
 // Fetch all assessments
 const fetchAssessments = async (token) => {
-  const { data } = await axios.get('http://localhost:5000/api/assessments', {
+  const { data } = await axios.get('https://assessment-backend-myde.onrender.com/api/assessments', {
     headers: { Authorization: `Bearer ${token}` },
   });
   return data;
@@ -16,14 +16,14 @@ const fetchAssessments = async (token) => {
 
 // Edit assessment API call
 const editAssessment = async ({ id, token, updatedData }) => {
-  await axios.put(`http://localhost:5000/api/assessments/${id}`, updatedData, {
+  await axios.put(`https://assessment-backend-myde.onrender.com/api/assessments/${id}`, updatedData, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
 
 // Delete assessment API call
 const deleteAssessment = async ({ id, token }) => {
-  await axios.delete(`http://localhost:5000/api/assessments/${id}`, {
+  await axios.delete(`https://assessment-backend-myde.onrender.com/api/assessments/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
